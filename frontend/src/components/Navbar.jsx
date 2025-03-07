@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Container, Flex, HStack, Text, useColorMode } from '@chakra-ui/react'
+import { Button, Container, Flex, HStack, Image, Text, useColorMode } from '@chakra-ui/react'
 import { PlusSquareIcon } from '@chakra-ui/icons'
 import { IoMoon } from 'react-icons/io5'
 import { LuSun } from 'react-icons/lu'
+import logo from '../../public/logo_onlinestore.svg';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -18,6 +19,7 @@ const Navbar = () => {
                     sm: "row"
                 }}
             >
+                <Image src={logo}  width={100}/>
                 <Text
                     fontSize={{ base: "22", sm: "28" }}
                     fontWeight={"bold"}
@@ -26,7 +28,7 @@ const Navbar = () => {
                     bgGradient={"linear(to-r, cyan.400, blue.500)"}
                     bgClip={"text"}
                 >
-                    <Link to={"/"}>Product Store 🛒 </Link>
+                    <Link to={"/"} style={{textTransform: "capitalize"}}>Welcome to OnlineStore 🛒 </Link>
                 </Text>
 
                 <HStack spacing={2} alignItems={"center"}>
